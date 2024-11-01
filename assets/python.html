@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EduConn - Plataforma de Cursos</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/chatbot.css">
+    <style>
+        body {
+            background-image: url('../img/fondoo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .d-flex-main {
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .footer {
+            color: #ccc;
+            font-size: 0.9em;
+            margin-top: auto;
+        }
+
+        .container {
+            max-width: 700px;
+            margin-top: 20px;
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .course-logo {
+            width: 160px; /* Tamaño ajustado */
+            height: 45px; /* Tamaño ajustado */
+            position: relative;
+            margin-right: 1px; /* Añadido margen para separar del texto */
+        }
+
+        .progress-bar {
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+</head>
+
+<body class="d-flex h-100 text-center text-bg-dark">
+    <div class="d-flex-main d-flex flex-shrink-0 p-3 sidebar">
+        <div>
+            <img src="../img/logo2.png" width="85%" style="border-radius: 49%;">
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="plataforma.html" class="nav-link active" aria-current="page">Inicio</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white">Cursos</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white">Discord</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white">Beneficios</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white">Ayuda</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white"><button class="btn btn-danger">Cerrar Sesión</button></a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <br>
+            <p class="footer">Derechos reservados EduConn © 2024</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="container mt-5">
+            <h1 class="text-center">Curso de Python</h1>
+            <h5 class="text-center mb-4">Avance del curso</h5>
+
+            <!-- Módulo 1 -->
+            <div class="card shadow-sm">
+                <div class="card-body d-flex align-items-center">
+                    <img src="https://www.python.org/static/img/python-logo.png" alt="Python Logo" class="course-logo">
+                    <div class="flex-fill">
+                        <h5 class="card-title mb-1">Módulo 1: Fundamentos de Python</h5>
+                        <p class="card-text">Estado de avance:</p>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Completado</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-success ms-3" disabled>Completado</button>
+                </div>
+            </div>
+            <br>
+
+            <!-- Módulo 2 -->
+            <div class="card shadow-sm">
+                <div class="card-body d-flex align-items-center">
+                    <img src="https://www.python.org/static/img/python-logo.png" alt="Python Logo" class="course-logo">
+                    <div class="flex-fill">
+                        <h5 class="card-title mb-1">Módulo 2: Servicios y Dependencias</h5>
+                        <p class="card-text">Estado de avance:</p>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary ms-3" data-bs-toggle="modal" data-bs-target="#modalModulo2">Continuar Módulo</button>
+                </div>
+            </div>
+            <br>
+
+            <!-- Módulo 3 -->
+            <div class="card shadow-sm">
+                <div class="card-body d-flex align-items-center">
+                    <img src="https://www.python.org/static/img/python-logo.png" alt="Python Logo" class="course-logo">
+                    <div class="flex-fill">
+                        <h5 class="card-title mb-1">Módulo 3: Enrutamiento en Python</h5>
+                        <p class="card-text">Estado de avance:</p>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary ms-3" data-bs-toggle="modal" data-bs-target="#modalModulo3">Iniciar Módulo</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modales -->
+        <div class="modal fade" id="modalModulo2" tabindex="-1" aria-labelledby="modalModulo2Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalModulo2Label">Módulo 2: Servicios y Dependencias</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/chPhlsHoEPo" frameborder="0" allowfullscreen></iframe>
+
+
+                        <p>Resumen del módulo: En este módulo, aprenderemos sobre los servicios y cómo inyectarlos en nuestros componentes en Python.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" onclick="marcarComoCompletado('modalModulo2')">Marcar como Completado</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalModulo3" tabindex="-1" aria-labelledby="modalModulo3Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalModulo3Label">Módulo 3: Enrutamiento en Python</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/chPhlsHoEPo" frameborder="0" allowfullscreen></iframe>
+
+
+                        <p>Resumen del módulo: En este módulo, aprenderemos sobre el enrutamiento en Python y cómo navegar entre diferentes vistas.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" onclick="marcarComoCompletado('modalModulo3')">Marcar como Completado</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="chatbot" class="chatbot">
+        <div class="chat-header" onclick="toggleChat()">
+            <span class="chat-title">Chatbot</span>
+            <span class="chat-icon">&#x1F4AC;</span> <!-- Icono de chat -->
+        </div>
+        <div id="chatbox" class="chatbox" style="display: none;">
+            <div class="chat-messages">
+                <p><strong>Chatbot:</strong> ¡Hola! ¿En qué puedo ayudarte hoy?</p>
+            </div>
+            <input type="text" id="userInput" placeholder="Escribe un mensaje..." />
+            <button class="send-button" onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+    <script src="../js/chatbot.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script>
+        function marcarComoCompletado(modalId) {
+            const modal = new bootstrap.Modal(document.getElementById(modalId));
+            modal.hide();
+            const progressBar = document.querySelector(`#${modalId} .progress-bar`);
+            progressBar.style.width = '100%';
+            progressBar.textContent = 'Completado';
+            const button = document.querySelector(`[data-bs-target="#${modalId}"]`);
+            button.textContent = 'Completado';
+            button.classList.add('disabled');
+        }
+    </script>
+</body>
+
+</html>

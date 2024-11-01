@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <link rel="icon" type="image/x-icon" href="../img/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    body {
+      background-image: url('../img/fondoo.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .d-flex-main {
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .footer {
+      color: #ccc;
+      font-size: 0.9em;
+      margin-top: auto;
+    }
+
+    #formularioEncuesta,
+    #formularioCursos,
+    #formularioPago {
+      display: none;
+    }
+
+    .form-inline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem; /* Espacio entre los campos */
+    }
+  </style>
+</head>
+
+<body class="d-flex h-100 text-center text-bg-dark">
+  <div class="d-flex-main d-flex flex-shrink-0 p-3 sidebar">
+    <div>
+      <img src="../img/logo2.png" width="85%" style="border-radius: 49%;">
+      <hr>
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <a href="#" class="nav-link active" aria-current="page">Inicio</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link text-white">Cursos</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link text-white">Discord</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link text-white">Beneficios</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link text-white">Ayuda</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link text-white"><button class="btn btn-danger">Cerrar Sesión</button></a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <br>
+      <p class="footer">Derechos reservados EduConn © 2024</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <br>
+    <h1>Bienvenido a EduConn</h1>
+    <h5>Para seguir con su aprendizaje debe completar la ruta</h5>
+    <ul class="list-group">
+      <li class="list-group-item"><button id="btnEncuesta" class="btn btn-primary">Realizar encuesta</button></li>
+      <li class="list-group-item"><button id="btnCursos" class="btn btn-primary">Seleccione cursos de interés</button></li>
+      <li class="list-group-item"><button id="btnPago" class="btn btn-primary">Realizar pago</button></li>
+    </ul>
+    <div id="formularioEncuesta" class="mt-4">
+      <h3>Encuesta</h3>
+      <form id="encuestaForm">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" required>
+        </div>
+        <div class="mb-3">
+          <label for="correo" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="correo" required>
+        </div>
+        <div class="mb-3">
+          <label for="comentarios" class="form-label">Temas de interés</label>
+          <textarea class="form-control" id="comentarios" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Enviar</button>
+      </form>
+    </div>
+    <div id="formularioCursos" class="mt-4" style="display: none;">
+      <h3>Seleccione cursos de interés</h3>
+      <form id="cursosForm">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="../img/angular.png" class="card-img-top" alt="Angular">
+              <div class="card-body">
+                <h5 class="card-title">Angular</h5>
+                <p class="card-text">Aprende a crear aplicaciones con Angular y reutiliza tu código y habilidades para crear aplicaciones para cualquier objetivo de implementación.</p>
+                <input type="checkbox" name="cursos" value="Angular" id="curso-angular" data-precio="50000">
+                <label for="curso-angular">Seleccionar curso</label>
+                <h5 class="card-title">$50000</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="../img/react.png" class="card-img-top" alt="React">
+              <div class="card-body">
+                <h5 class="card-title">React</h5>
+                <p class="card-text">Te permite construir interfaces de usuario a partir de piezas individuales llamadas componentes.</p>
+                <input type="checkbox" name="cursos" value="React" id="curso-react" data-precio="80000">
+                <label for="curso-react">Seleccionar curso</label>
+                <h5 class="card-title">$80000</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="../img/python.png" class="card-img-top" alt="Python">
+              <div class="card-body">
+                <h5 class="card-title">Python</h5>
+                <p class="card-text">Es un lenguaje de programación que te permite trabajar rápidamente e integrar sistemas de manera más eficaz.</p>
+                <input type="checkbox" name="cursos" value="Python" id="curso-python" data-precio="60000">
+                <label for="curso-python">Seleccionar curso</label>
+                <h5 class="card-title">$60000</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success mt-3">Enviar</button>
+      </form>
+    </div>
+
+    <div id="formularioPago" class="mt-4" style="display: none;">
+      <h3>Formulario de Pago</h3>
+      <form id="pagoForm">
+        <div class="form-inline mb-3">
+          <div class="flex-fill">
+            <label for="nombrePago" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="nombrePago" required>
+          </div>
+          <div class="flex-fill">
+            <label for="numeroTarjeta" class="form-label">Número de tarjeta</label>
+            <input type="text" class="form-control" id="numeroTarjeta" required>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="codigo" class="form-label">Código promocional (DESCUENTO10)</label>
+          <input type="text" class="form-control" id="codigo">
+          <button type="button" class="btn btn-info mt-2" id="validarCupon">Validar Cupón</button>
+        </div>
+        <h5>Resumen de Cursos Seleccionados:</h5>
+        <ul id="resumenCursos"></ul> <!-- Lista de cursos seleccionados -->
+        <h4 id="totalPrecio">Total: $0</h4> <!-- Precio total inicial -->
+        <div class="form-inline mb-3">
+          <div class="flex-fill">
+            <label for="fechaVencimiento" class="form-label">Fecha de vencimiento (MM/AA)</label>
+            <input type="text" class="form-control" id="fechaVencimiento" required>
+          </div>
+          <div class="flex-fill">
+            <label for="cvu" class="form-label">CVU</label>
+            <input type="text" class="form-control" id="cvu" required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success mt-3">Pagar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-3g/2OavI55b7t0O9tYt9L6xSS2TyZb7U6J3ZdHxAWv5MB4oX0X0TdNTgM0DoSVcF"
+    crossorigin="anonymous"></script>
+  <script src="../js/funciones.js"></script>
+</body>
+
+</html>
